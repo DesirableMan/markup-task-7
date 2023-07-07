@@ -2,7 +2,113 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+        <meta name="keywords" content="продажа котят, продажа кошек, объявления о продаже кошек,">
+        <meta name="description" content="Продажа кошек. Продажа котят.
+        Каталог котят с фотографиями, телефонами и сортировкой по породам.
+        Бесплатное размещение объявлений о продаже котят.">
+        <title>задача Бабуленькины котятки</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed" >
 </head>
 <body>
+    <header class="header">
+        <h1>Бабуленькины котятки</h1>
+    </header>
+    <main class="content">
+        <input  type="checkbox" id="abyssinian">
+        <input  type="checkbox" id="british">
+        <input  type="checkbox" id="russian-blue">
+        <input  type="checkbox" id="burmese">
+        <input  type="checkbox" id="neva-masquerade">
+        <div class="cat-breeds">
+            <label for="abyssinian" class="abyssinian">Абиссинская</label>
+            <label for="british" class="british">Британская</label>
+            <label for="russian-blue" class="russian-blue">Русская голубая</label>
+            <label for="burmese" class="burmese">Бирманская</label>
+            <label for="neva-masquerade" class="neva-masquerade">Невская маскарадная</label>
+        </div>
+        <section class="cat-photos">
+            <figure class="photo abyssinian">
+                <img src="https://zooprice.ru/upload/iblock/2a2/8jia7k59swl4e230p1u1g1txy3v4lw0w.jpg" alt="Абиссинская">
+                <figcaption>Эмануэлла - 6 месяцев</figcaption>
+            </figure>
+            <figure class="photo neva-masquerade">
+                <img src="https://zooprice.ru/upload/iblock/32b/m4v4xk3z01zls0k3fn0445z4p7g0q22i.jpeg" alt="Невская маскарадная">
+                <figcaption>Беляш - 5 месяцев</figcaption>
+            </figure>
+            <figure class="photo british">
+                <img src="https://zooprice.ru/upload/iblock/5a6/3vqosdduzbo5kii6do5i7zxnmtwzx8ox.jpg" alt="Британская короткошерстная">
+                <figcaption>Чемпион - 4 месяца</figcaption>
+            </figure>
+            <figure class="photo russian-blue">
+                <img src="https://zooprice.ru/upload/iblock/5aa/j814utko21xflog1hys4e0pbihdcrk0n.jpg" alt="Русская голубая">
+                <figcaption>Пантера - 7 месяцев</figcaption>
+            </figure>
+            <figure class="photo burmese">
+                <img src="https://zooprice.ru/upload/iblock/da4/bsg4s0ly2syht4ronw7vjqdhkkspp6oh.jpg" alt="Бирманская">
+                <figcaption>Леопольд - 8 месяцев</figcaption>
+            </figure>
+            <figure class="photo neva-masquerade">
+                <img src="https://zooprice.ru/upload/iblock/3f3/u78r22owxgx4k0d8qpe7ztcn79sji1a8.jpg" alt="Невская маскарадная">
+                <figcaption>Маркиза - 3 месяца</figcaption>
+            </figure>
+            <figure class="photo burmese">
+                <img src="https://zooprice.ru/upload/iblock/2db/hoci4qnr7agxuikp9hcn3jsxcwvmhsfj.jpg" alt="Бирманская">
+                <figcaption>Васька - 2 месяца</figcaption>
+            </figure>
+            <figure class="photo abyssinian">
+                <img src="https://zooprice.ru/upload/iblock/af8/4a2ki2zr1gp1y6zy2aiiqaf7gbznf65n.jpg" alt="Абиссинская">
+                <figcaption>Маруся - 3 месяца</figcaption>
+            </figure>
+        </section>
+        <aside class="rating">
+            <h2>Рейтинг</h2>
+            <label for="sort_by_low">По убыванию</label>
+            <input type="checkbox" id="sort_by_low">
+            <section class="rating-items">
+                <article class="rating-item rating-8">
+                    <h3>Абиссинская</h3>
+                    <div class="value">
+                        <div class="rating-bar"></div>
+                        <span>8</span>
+                    </div>
+                </article>
+                 <article class="rating-item rating-4">
+                    <h3>Британская</h3>
+                    <div class="value">
+                        <div class="rating-bar"></div>
+                        <span>4</span>
+                    </div>
+                </article>
+                 <article class="rating-item rating-6">
+                    <h3>Русская голубая</h3>
+                    <div class="value">
+                        <div class="rating-bar"></div>
+                        <span>6</span>
+                    </div>
+                </article>
+                 <article class="rating-item rating-7">
+                    <h3>Бирманская</h3>
+                    <div class="value">
+                        <div class="rating-bar"></div>
+                        <span>7</span>
+                    </div>
+                </article>
+                 <article class="rating-item rating-10">
+                    <h3>Невская маскарадная</h3>
+                    <div class="value">
+                        <div class="rating-bar"></div>
+                        <span>10</span>
+                    </div>
+                </article>
+            </section>
+        </aside>
+    </main>
+    <footer class="footer">
+        <div class="organization">&#169; ООО Бабуленькины котятки, 2023</div>
+        <address>Наш адрес: улица Котовая, д.5</address>
+    </footer>
 </body>
 </html>

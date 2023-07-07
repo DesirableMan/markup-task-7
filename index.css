@@ -1,0 +1,307 @@
+
+body
+{
+    font-family: Fira Sans Condensed, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    background: #dddddd;
+}
+
+.header
+{
+    width: 98%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content
+{
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+
+.cat-breeds
+{
+    position: relative;
+    flex: .25 0 20%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    background: #ccc;
+
+}
+
+.cat-breeds label
+{
+    font-family: inherit;
+    font-size: 20px;
+    align-items: center;
+    padding: 15px;
+    border-bottom: solid 1px;
+}
+
+.cat-photos
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex: .75 0 60%;
+    justify-content: space-around;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+
+.photo
+{
+    display: flex;
+    flex-direction: column;
+    /*height: 300px;*/
+    margin: 0 5px 10px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background: #FFFFFF;
+}
+
+.photo img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.photo:nth-child(8n+1),
+.photo:nth-child(8n+7)
+{
+    flex-basis: calc(33% - 10px);
+}
+
+.photo:nth-child(8n+2),
+.photo:nth-child(8n+6)
+{
+    flex-basis: calc(66% - 10px);
+}
+
+.photo:nth-child(8n+3),
+.photo:nth-child(8n+4),
+.photo:nth-child(8n+5)
+{
+    flex-basis: calc(33% - 10px);
+}
+
+.photo:nth-child(8n+8)
+{
+    flex-basis: 100%;
+}
+
+.photo figcaption
+{
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    background: rgba(0, 0, 0, .4);
+    font-family: inherit;
+    color:#fff;
+    padding: 15px 10px;
+    align-self: flex-start;
+}
+
+.content > input,
+.content > input:checked ~ .cat-photos .photo:hover figcaption
+{
+    display: none;
+}
+
+.photo:hover figcaption,
+input[id='abyssinian']:checked ~ .cat-photos .abyssinian:hover figcaption,
+input[id='british']:checked ~ .cat-photos .british:hover figcaption,
+input[id='russian-blue']:checked ~ .cat-photos .russian-blue:hover figcaption,
+input[id='burmese']:checked ~ .cat-photos .burmese:hover figcaption,
+input[id='neva-masquerade']:checked ~ .cat-photos .neva-masquerade:hover figcaption
+{
+   display: block;
+}
+
+.content > input:checked ~ .cat-photos .photo
+{
+    opacity: .5;
+}
+
+.rating > input,
+.cat-photos img:hover
+{
+     cursor: pointer;
+}
+
+
+input[id='abyssinian']:checked ~ .cat-photos .abyssinian,
+input[id='british']:checked ~ .cat-photos .british,
+input[id='russian-blue']:checked ~ .cat-photos .russian-blue,
+input[id='burmese']:checked ~ .cat-photos .burmese,
+input[id='neva-masquerade']:checked ~ .cat-photos .neva-masquerade
+{
+    opacity: 1;
+}
+
+input[id='abyssinian']:checked ~ .cat-breeds .abyssinian,
+input[id='british']:checked ~ .cat-breeds .british,
+input[id='russian-blue']:checked ~ .cat-breeds .russian-blue,
+input[id='burmese']:checked ~ .cat-breeds .burmese,
+input[id='neva-masquerade']:checked ~ .cat-breeds .neva-masquerade,
+.cat-breeds label:hover
+{
+    background: #555;
+    color: #fff;
+    cursor: pointer;
+}
+
+.rating
+{
+    background: #ccc;
+    align-self: flex-start;
+    flex: 1 0 20%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+
+.rating h2
+{
+    font-family: inherit;
+    font-size: 25px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #f00;
+    padding-left: 10px;
+
+}
+
+.rating > label
+{
+    font-family: inherit;
+    padding-left: 10px;
+}
+
+.rating-item h3
+{
+    font-family: inherit;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.rating-items
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.rating-item
+{
+    display: flex;
+    flex-direction: column;
+    /*margin: 5px;*/
+}
+
+
+.value{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.rating-item span
+{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+
+.rating > input:checked ~ .rating-items .rating-10
+{
+    order: 1;
+}
+
+
+.rating > input:checked ~ .rating-items .rating-8
+{
+    order: 2;
+}
+
+.rating > input:checked ~ .rating-items .rating-7
+{
+    order: 3;
+}
+
+.rating > input:checked ~ .rating-items .rating-6
+{
+    order: 4;
+}
+
+.rating > input:checked ~ .rating-items .rating-4
+{
+    order: 7;
+}
+
+.rating-item > .value .rating-bar
+{
+    height: 1em;
+    width: 80%;
+    background-repeat: no-repeat;
+}
+
+.rating-10 .rating-bar
+{
+    background: linear-gradient(to right, #078600, #fff);
+    background-size: 100% 100%;
+}
+
+
+.rating-8 .rating-bar
+{
+    background: linear-gradient(to right, #71bd53, #fff);
+    background-size: 80% 100%;
+}
+
+
+.rating-7 .rating-bar
+{
+    background: linear-gradient(to right, #9fee00, #fff);
+    background-size: 70% 100%;
+}
+
+
+.rating-6 .rating-bar
+{
+    background: linear-gradient(to right, #ff0, #fff);
+    background-size: 60% 100%;
+}
+
+
+.rating-4 .rating-bar
+{
+    background: linear-gradient(to right, #f00, #fff);
+    background-size: 40% 100%;
+}
+
+
+.footer{
+    display: flex;
+    flex: 0 0 70%;
+    justify-content: space-between;
+    font-size: 20px;
+    align-items: center;
+}
+
+.organization,
+address
+{
+    margin: 0 20px;
+}
